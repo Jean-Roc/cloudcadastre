@@ -11,9 +11,9 @@ SELECT
 	TRIM("departement") "departement",
 	TRIM("code_commune") AS "code_commune",
 	TRIM("nom_de_la_commune") AS "nom_commune",
-	"departement" || "code_commune" AS code_insee,
+	"departement" || "code_commune" AS "code_insee",
 	TRIM("section") AS section,
-	CAST("n_plan" AS INTEGER) AS numero_parcelle,
+	CAST("n_plan" AS INTEGER) AS "numero_parcelle",
 	CASE 
 		WHEN TRIM("prefixe") = '' THEN NULL
 		ELSE TRIM("prefixe")
@@ -23,10 +23,12 @@ SELECT
 	TRIM("code_droit_par") AS "code_droit_libelle",
 	TRIM("groupe_personne_par") AS "groupe_personne",
 	TRIM(
-	REGEXP_REPLACE(
-	REGEXP_REPLACE("denomination_par", '^''(.*)''$', '\1')
-	, '^''(.*)''$', '\1')
-	) AS "denomination",
+		REGEXP_REPLACE(
+		REGEXP_REPLACE(
+		REGEXP_REPLACE("denomination_par", '^''(.*)''$', '\1'),
+		'^''(.*)''$', '\1'),
+		'^"(.*)"$', '\1'),
+		'*-, ') AS "denomination",
 	TRIM("forme_juridique_par") AS "forme_juridique",
 	TRIM("forme_juridique_abregee_par") AS "forme_juridique_abregee",
 	TRIM("n_voirie") AS "numero_voirie",

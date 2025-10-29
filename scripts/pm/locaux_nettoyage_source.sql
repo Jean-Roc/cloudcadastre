@@ -17,10 +17,12 @@ SELECT
 	TRIM("code_droit") AS "code_droit_libelle",
 	TRIM("groupe_personne") AS "groupe_personne",
 	TRIM(
-	REGEXP_REPLACE(
-	REGEXP_REPLACE("denomination", '^''(.*)''$', '\1')
-	, '^''(.*)''$', '\1')
-	) AS "denomination",
+		REGEXP_REPLACE(
+		REGEXP_REPLACE(REGEXP_REPLACE(
+		"denomination", 
+		'^''(.*)''$', '\1')	, '^''(.*)''$', '\1')
+		, '^"(.*)"$', '\1'), 
+	'*-, ')  AS "denomination",
 	TRIM("forme_juridique") AS "forme_juridique",
 	TRIM("forme_juridique_abregee") AS "forme_juridique_abregee",
 	TRIM("batiment") AS "batiment",
