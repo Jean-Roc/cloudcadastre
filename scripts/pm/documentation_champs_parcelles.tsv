@@ -1,0 +1,32 @@
+colonnes	type	exemple	description
+millesime	INTEGER	2025	année de publication de la donnée
+code_direction	BIGINT	6	code de la direction régionale concernée
+departement	VARCHAR	976	code départemental
+code_commune	VARCHAR	909	code de la commune
+nom_commune	VARCHAR	ZUYTPEENE                                           	nom de la commune
+code_insee	VARCHAR	976617	code INSEE de la commune
+section	VARCHAR	ZZ                                                  	unité de découpage cadastral
+numero_parcelle	INTEGER	9271	identifie la parcelle dans la section cadastrale
+prefixe	VARCHAR	950	code « commune » des communes absorbées pour les fusions de communes
+numero_majic	VARCHAR	PBSPVX                                              	numéro personne présent dans l application majic
+numero_siren	VARCHAR	U33622241                                           	numéro d’identification attribué par l’INSEE aux entreprises ou établissements immatriculés au Registre du Commerce et des Sociétés (RCS). Les numéros SIREN commençant par U sont des numéros fictifs mis en place par la DGFiP.
+code_droit	VARCHAR	Z                                                   	codes de droit
+code_droit_libelle	VARCHAR	Usufruitier                                         	libellés des codes de droit
+groupe_personne_code	VARCHAR	9	code du groupe personne propriétaire
+groupe_personne_code_exoneration	VARCHAR	A                                                   	la lettre « A » pour les personnes exonérées de cotisations aux caisses d'assurance-accidents agricole en Alsace et en Moselle
+groupe_personne_libelle	VARCHAR	établissements publics ou organismes associés       	libellé du code du groupe personne propriétaire
+denomination	VARCHAR	ZZZ ACCOUNTING                                      	dénomination du propriétaire du local
+forme_juridique	VARCHAR	9970	code INSEE de la forme juridique de la personne morale
+forme_juridique_libelle	VARCHAR	État, collectivité ou établissement public étranger 	libellé du code INSEE de la forme juridique de la personne morale
+forme_juridique_abregee	VARCHAR	SYMI                                                	nomenclature abrégée dans laquelle un même sigle va correspondre à plusieurs formes juridiques distinguées dans la nomenclature de l'INSEE (« Blanc » = NULL)
+numero_voirie	VARCHAR	9999	
+indice_repetition	VARCHAR	Z                                                   	indice de répétition est l’indicateur de répétition du numéro de voirie dans la voie (Bis, Ter…)
+code_voie_majic	INTEGER	11041	identifiant la voie dans l’application Majic interne à la DGFiP
+code_voie_rivoli	VARCHAR	Y004                                                	code administratif de la voie ou du lieu-dit (obsolète)
+nature_voie	VARCHAR	ZUP                                                 	
+nom_voie	VARCHAR	ZYGFRID DOMINIAK                                    	
+contenance_parcelle_centiare	BIGINT	999999999	contenance de la parcelle en centiares
+subdivision_fiscale	VARCHAR	ZY                                                  	identifie la subdivision fiscale (suf) dans la parcelle
+contenance_subdivision_centiare	BIGINT	999999999	contenance de la subdivision fiscale en centiares
+nature_culture_code	VARCHAR	VI                                                  	codes de la nature de culture
+nature_culture_libelle	VARCHAR	Vignes                                              	libellés des codes de la nature de culture
