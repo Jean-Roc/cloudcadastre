@@ -1,6 +1,5 @@
 # répertoires de travail
 donnees/etatlab
-*.parquet
 *.duckdb
 
 # Byte-compiled / optimized / DLL files
